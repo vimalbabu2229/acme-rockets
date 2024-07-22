@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities{
+    /*  Below rule is to set the height of each sections 
+        that will allow the sections to take the complete viewport */
+    .section-min-height{
+        min-height: calc(100vh - 68px);
+    }
+
+    /*  below rule is to add through js and is the animation for 
+        hamburg button */
+    .toggle-btn{
+        @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&]:rotate-[360deg]
+    }
+}
